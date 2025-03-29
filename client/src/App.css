@@ -1,0 +1,264 @@
+/* client/src/App.css */
+
+/* --- General Styles --- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Nicer font stack */
+  margin: 0; /* Remove default body margin */
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Subtle gradient background */
+  color: #333;
+  min-height: 100vh; /* Ensure background covers full height */
+  display: flex; /* Helps with centering the App container */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+}
+
+.App {
+  max-width: 650px; /* Slightly wider */
+  width: 90%; /* Responsive width */
+  margin: 20px auto; /* Auto margins for centering */
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+  padding: 30px 40px; /* More padding */
+  border-radius: 12px; /* Softer corners */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+  text-align: center; /* Center text within the app container */
+  overflow: hidden; /* Prevent content spills */
+}
+
+h1, h2, h3 {
+  color: #4a4a4a; /* Dark grey for headings */
+  margin-top: 0; /* Remove default top margin */
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 25px 0;
+}
+
+/* --- Status Bar --- */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 0.9em;
+  color: #555;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.message-display {
+  font-weight: 500;
+  color: #1a73e8; /* Blue for messages */
+  text-align: right;
+}
+
+/* --- Home Screen --- */
+.home-screen {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px; /* Give it some height */
+}
+
+.home-screen .game-title {
+  font-size: 2.8em; /* Larger title */
+  font-weight: 700;
+  color: #5e42a6; /* Royal purple */
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.home-screen .tagline {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+.home-screen .play-button {
+  background: linear-gradient(to right, #ff8008, #ffc837); /* Orange/Gold gradient */
+  color: white;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 30px; /* Pill shape */
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.4); /* Glow effect */
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.home-screen .play-button:hover:not(:disabled) {
+  transform: translateY(-3px); /* Slight lift */
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.5);
+}
+
+.home-screen .play-button:active:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(255, 165, 0, 0.4);
+}
+
+.home-screen .play-button:disabled {
+  background: #ccc;
+  color: #888;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* --- Waiting Screen --- */
+.waiting-screen {
+  padding: 30px;
+  color: #555;
+}
+.waiting-screen h2 {
+    color: #1a73e8;
+}
+.waiting-screen p {
+    font-size: 1.1em;
+}
+
+
+/* --- Game Info & Forms --- */
+.game-info, .minister-form, .round-results, .game-over {
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  margin-top: 25px;
+  border-radius: 8px;
+  background-color: #fdfdfd; /* Very light grey */
+  text-align: left; /* Align game content left */
+}
+
+.game-info h2 {
+    text-align: center; /* Center section titles */
+    margin-bottom: 20px;
+    color: #5e42a6;
+}
+
+.game-info p, .game-over p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+strong {
+    color: #d63384; /* Pinkish accent for roles/scores */
+    font-weight: 600;
+}
+
+/* --- Minister Form Specific --- */
+.minister-form {
+    background-color: #eef2ff; /* Light blue background */
+    border-color: #c7d2fe;
+}
+
+.minister-form h3 {
+    text-align: center;
+    color: #4338ca; /* Indigo */
+    margin-bottom: 15px;
+}
+
+.minister-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #555;
+}
+
+.minister-form select {
+    width: 100%;
+    padding: 10px; /* More padding */
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.minister-form button {
+    display: block; /* Make button block level */
+    width: 100%; /* Full width */
+    background-color: #16a34a; /* Green */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.minister-form button:hover {
+    background-color: #15803d; /* Darker green */
+}
+
+/* --- Results & Game Over --- */
+.round-results, .game-over {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+}
+
+.round-results h3, .game-over h2, .game-over h3 {
+    text-align: center;
+    color: #0d6efd; /* Bootstrap blue */
+}
+
+.round-results p {
+    margin-bottom: 8px;
+}
+
+.game-over ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.game-over li {
+    background-color: #e9ecef;
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.game-over li:first-child { /* Winner */
+    font-weight: bold;
+    background: linear-gradient(to right, #f9d423, #ffae42); /* Gold gradient */
+    color: #5c3d03; /* Dark gold text */
+    border: 1px solid #ffc107;
+}
+.game-over li span { /* If you add spans for score alignment */
+    font-weight: bold;
+}
+
+.game-over button { /* Play Again Button */
+  background-color: #0d6efd;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  margin-top: 20px;
+}
+
+.game-over button:hover {
+    background-color: #0b5ed7;
+}
+
+/* --- Main Content Area --- */
+.main-content {
+  margin-top: 20px;
+}

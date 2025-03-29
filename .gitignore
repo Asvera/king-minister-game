@@ -1,0 +1,9 @@
+# .gitignore in project root
+node_modules/
+server/node_modules/
+client/node_modules/
+.env
+*.log
+
+# If you build the client DURING deployment on Render, uncomment the next line
+# client/dist/
